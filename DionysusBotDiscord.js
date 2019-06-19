@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js')
 const bot = new Discord.Client();
-const token = 'NTg2OTE5NzUyNDcxOTM3MDI0.XPvW2A.zd_wsT7FRNXapmvXYzZSIZFPraI';
+const token = 'TOKEN';
 const PREFIX = '!';
 
 // Arrays of Phrases, and their executions
