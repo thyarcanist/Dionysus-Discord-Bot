@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js')
 const bot = new Discord.Client();
-const token = 'TOKEN';
+const token = 'NTg2OTE5NzUyNDcxOTM3MDI0.XQ2IIA.BmQxqoSLwH3okcIQbuvugfXYOPw';
 const PREFIX = '!';
 
 // Arrays of Phrases, and their executions
@@ -12,6 +12,10 @@ var fallfact = ["Did you know: For every one npc in New Vegas, there should be a
 var positiveTips = ["Spend your time with good people, not toxic ones.", "Practice doing good deeds.", "Take the time to appreciate the same things.", "Compliment people, it does wonders; say nice things.", "Have a physical hobby and learn an instrument.", "If you are overapologetic, try not to say sorry so often. Sometimes it's nagging about faults, other times, just fix the sorry with true results.", "Find something beautiful everyday. There's always something beautiful to experience.", "Don't just live life, **feel** life.", "Drop a bunch of electrons!", "If something is on your mind or on your to-do list takes less than two minutes, do it while it is on your mind.", "Every time you enter the room make sure you leave it tidier than when you entered. No matter how little a change you made.", "Practice positive self-talk, it's easier to be negative than think positive about a situation."];
 var jokesDad = ["I just lost 20% of my couch! Ouch.", "My wife screamed, 'you haven't listened to a single word I've said, have you?!' What a weird way to start a conversation.", "People are usually shocked when they find out I'm not a very good electrician.", "My son told me he didn't understand cloning. I said, 'that makes two of us.'", "Dads are like Boomerangs... I hope.", "I just saw my wife walk by with her sexiest underwear on, which can mean one thing. It's laundry day.", "When two people have sex it's a twosome. When three people have sex, it's a threesome. An orgy with a whole lot of people is wholesome. How I know why people call you handsome.", "Only anti-vaxxers will get this! Measles.", "Do you know where in a hospital the invisible man can't hide? The I.C.U.", "Did you know the people in Dubai don't like the flintstones? But the people in Abu Dhabi Do.", "My friend couldn't afford to pay his water bill. So I sent him a 'get well soon' card.", "When does a joke become a dad-joke? When it's apparent.", "Why did the Mexican take some Xanax? For Hispanic attacks.", "As I handed my Dad his 50th birthday card, he looked at me with tears in his eyes and said, 'Yo know, one would have been enough.'", "If pronouncing my b's as v's makes me sound Russian, that soviet.", "People who rob jewelry stores and banks are pretty bad, but people who rob bakeries really take the cake."];
 var Pinsult = ['gałgan','urwis', 'szelma', 'gagatek', 'nicpoń', 'ziółko', 'hultaj', 'ancymon', 'fiut', 'drapichrust', 'utrapieniec', 'psotnik', 'łapserdak', 'urwipołeć', 'hycel', 'niecnota', 'łobuz', 'łobuziak', 'łotrzyk', 'rozrabiaka', 'gawrosz', 'diablę', 'obwieś', 'bisurman', 'swawolnik', 'huncwot', 'diabelskie nasienie', 'diabelski syn'];
+
+var Russian = ["Cyka Blat!", "Idi v pizdu", "idi nahui"];
+var team = ["The Drunken Wolves", "Drunken Wolves", "ФСБ", "Пьяные волки"];
+var Warhammer = ["https://www.youtube.com/watch?v=IEGo41443iI", "https://www.youtube.com/watch?v=5W6yGH6X1c4", "https://www.youtube.com/watch?v=uiDZToowbCs"];
 
 bot.on('ready', () => {
     console.log('Dionysus has started to drink!')
@@ -28,6 +32,14 @@ bot.on('message', message=>{
             var randomFallout = Math.floor(Math.random() * fallfact.length);
             return message.channel.send(fallfact[randomFallout]);
          }
+         else if (message.content=='!Russia'){
+            var whiteRussian = Math.floor(Math.random() * Russian.length);
+            return message.channel.send(Russian[whiteRussian]);
+        }
+        else if (["Team.", "team.", "team", "Team", "Team?", "team?"].includes(message.content)){
+            var russTeam = Math.floor(Math.random() * team.length);
+            return message.channel.send(team[russTeam]);
+        }
          else if (message.content=='!Tips'){
             var randomPositiveTips = Math.floor(Math.random() * positiveTips.length);
             return message.channel.send(positiveTips[randomPositiveTips]);
@@ -57,13 +69,19 @@ bot.on('message', message=>{
         else if (message.content=='!owner'){
             return message.channel.send('@Arch Magus#5591 owns me.');
          }
+        else if (message.content.includes('hentai')) {
+            return message.channel.send("What manner of heresy are you on about?");
+        }
+        else if (message.content.includes('drink')) {
+            return message.channel.send("I am quite parched.");
+        }
         else if (message.content=='How are you Dionysus?'){
             return message.channel.send('Drinking. :smirk: Same as always.');
         }
         else if (message.content=='What do I do Dionysus?'){
             return message.channel.send('Keep going. Keep up the fun.');
         }
-        else if (message.content=='Can you pass the Turning Test?'){
+        else if (message.content=='Can you pass the Turing Test?'){
             return message.channel.send('I don\'t know, can I?');
         }
         else if (message.content=='Do you want to be human?'){
@@ -135,6 +153,9 @@ bot.on('message', message=>{
         }
         else if (['thanks i hate it', 'Thanks I hate it', 'stop'].includes(message.content)){
             return message.channel.send(':smirk:');
+        }
+        else if (message.content.includes('fuck')) {
+            return message.channel.send("Are you fucking kidding me?");
         }
         else if (message.content=='deep thought'){
             return message.channel.send('Thinking is for nerds.');
