@@ -5,8 +5,8 @@ The bot is mostly for shitposting until I figure out how to get it to search lib
 
 For now, It responds to an array of things.
 
-Commands
-!dadjoke - For Dad Jokes.
-!Fallout - For a random Fallout Fact.
-!Tips - For positive tips.
-!owner - Tells who owns it.
+Commands:
+	!dadjoke - For Dad Jokes.
+  !Fallout - For a random Fallout Fact.
+  !Tips - For positive tips.
+  !owner - Tells who owns it.
