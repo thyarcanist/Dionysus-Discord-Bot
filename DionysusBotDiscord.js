@@ -280,9 +280,6 @@ bot.on('message', message=>{
         else if (['fuck', 'Fuck','FUCK'].includes(message.content)){
             return message.channel.send('Fucking is a great way to end... and start a day. :wink:');
         }
-        else if (['nigga', 'Nigga!','nigger!'].includes(message.content)){
-            return message.channel.send('Really now?');
-        }
         else if (['worship Dionysus', 'worship him!','How to folow Dionysus?'].includes(message.content)){
             return message.channel.send('Don\'t follow me you\'ll end up in my arms.');
         }
